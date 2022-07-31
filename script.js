@@ -1,4 +1,4 @@
-
+//Урок №2
 let num = 266219;
 str = num.toString();
 
