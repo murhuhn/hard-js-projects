@@ -1,17 +1,23 @@
+//Урок №3 (усложненные задания)
 
-let num = 266219;
-str = num.toString();
+// 1)
 
-let result = 1; 
-for (let i = 0; i < str.length; i++) {
-  const digit = Number(str[i]); 
-  result = result * digit;
+while (true) {
+  lang = prompt("Установите язык, введя 'ru' или 'en' в поле ниже", "ru/en");
+
+  if (lang == 'ru') {
+    console.log('Понедельник, вторник, среда, четверг пятницы, суббота, воскресенье.');
+    break;
+  } else if (lang == 'en') {
+    console.log('Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.');
+    break;
+  }
+
+  alert("Неправильное значение. Введите 'ru' или 'en'.");
 }
 
-console.log(result);
+// 2)
 
-
-
-let pow = result **= 3;
-
-console.log(String(pow).slice(0, 2));
+let namePerson = 'Артем';
+let res = (namePerson == 'Артем') ? 'директор' : (namePerson == 'Александр') ? 'преподаватель' : 'студент';
+console.log(res);
