@@ -24,6 +24,5 @@ numbers:
 
 primeNumbers();
 
-f
 
 
