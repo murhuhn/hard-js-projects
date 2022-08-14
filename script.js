@@ -1,28 +1,24 @@
-const arr = ['346', '457', '968', '275', '403', '123', '377'];
-const arrLength = arr.length;
+'use strict'
 
-for (let i = 0; i < arrLength; i++) {
-  if (arr[i].startsWith('2') || arr[i].startsWith('4')) {
-    console.log(arr[i]);
-  }
-}
+const weekData = {
+  weekArr: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Вокресенье' ],
+  weekDiv: document.getElementById('week'),
+  findTodayDay: function() {
 
+    weekData.weekArr.forEach(function(item, i) {
+      let dayDiv = document.createElement('div'); 
+      if (i === (6 + new Date().getDay()) % 7) { 
+        dayDiv.classList.add('today-day'); 
+      } else if (i === 5 || i === 6) { 
+        dayDiv.classList.add('weekend-day'); 
+      }
+      dayDiv.textContent = item; 
+      weekData.weekDiv.appendChild(dayDiv);
+    
+    });
+  },
+};
 
-
-const primeNumbers = function() {
-numbers:
-  for (var i = 2; i < 101; i++) {
-
-    for (var j = 2; j < i; j++) {
-      
-      if (i % j == 0)  continue numbers;
-      
-     }    
-    console.log(+ i + ' - ' + ' делители этого числа: 1 и ' + i);
-  }
-}
-
-primeNumbers();
-
+weekData.findTodayDay();
 
 
