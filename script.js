@@ -9,7 +9,8 @@ const weekData = {
       let dayDiv = document.createElement('div'); 
       if (i === (6 + new Date().getDay()) % 7) { 
         dayDiv.classList.add('today-day'); 
-      } else if (i === 5 || i === 6) { 
+      } 
+      if (i === 5 || i === 6) { 
         dayDiv.classList.add('weekend-day'); 
       }
       dayDiv.textContent = item; 
